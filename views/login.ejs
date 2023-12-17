@@ -1,0 +1,25 @@
+<%- include ("partials/head"); -%>
+<main>
+    <% if (message) { %>
+        <h2 class="message"><%= message %></h2>
+    <% } %>
+    
+    <section class="booking-form">
+        <h2>Fill in the Login Details</h2>
+        <form id="booking-form" action="/user/login" method="post">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required title="Please enter a valid email address.">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required minlength="8" title="Password must be at least 8 characters long.">
+            </div>
+            <div class="form-button-group"> <!-- Flex container for buttons -->
+                <button class="formbutton" type="submit">Login</button>
+                <a href="/user/register" class="formbutton">Register</a>
+            </div>
+        </form>
+    </section>      
+</main>
+<%- include ("partials/foot"); -%>

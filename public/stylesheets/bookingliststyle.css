@@ -1,0 +1,92 @@
+.container {
+    min-height: 100%;
+    margin-bottom: -100px;
+    padding-bottom: 100px;
+    flex: 1;
+  }
+
+  .container h1 {
+    text-align: center;
+    margin: 20px auto;
+  }
+  
+  .booking-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .booking-table th, .booking-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .booking-row:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+  
+  .wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+    /* Style for the message when there are no bookings */
+    .no-bookings {
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .no-bookings p {
+        font-size: 18px;
+        color: #888;
+    }
+    
+    /* Style for the image */
+    .no-bookings img {
+        max-width: 400px;
+        margin-top: 20px;
+    }
+
+    .container .button-container {
+        margin-top: 20px;
+    }
+    
+    /* Pill-shaped button styles */
+    .pill-button {
+        display: inline-block;
+        background-color: #2a2a2b;
+        color: #fff;
+        padding: 18px 20px;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 18px;
+        text-decoration: none;
+    }
+   
+    /* Center the button-choice container horizontally and vertically */
+.button-choice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh; /* Set a minimum height to center vertically */
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+/* Style for the button containers */
+.button-list-container-left,
+.button-list-container-right {
+  text-align: center;
+}
+
+/* Add some margin to create space between the buttons */
+.button-list-container-left {
+  margin-right: 15px;
+}
+
+.button-list-container-right {
+  margin-left: 15px;
+}
+
+
+  

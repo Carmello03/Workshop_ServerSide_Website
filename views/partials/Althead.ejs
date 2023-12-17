@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Workshop Registration</title>
+        <link rel="stylesheet" href="/stylesheets/bookingstyle.css">
+        <link rel="stylesheet" href="/stylesheets/successstyle.css">
+        <link rel="stylesheet" href="/stylesheets/head_footStyleAlt.css">
+        <link rel="stylesheet" href="/stylesheets/bookingliststyle.css">
+        <link rel="stylesheet" href="/stylesheets/aboutstyle.css">
+        <link rel="stylesheet" href="/stylesheets/schedulestyle.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="/image/logo.png" alt="Logo">
+                <h1>orkShop</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="\">Home</a></li>
+                    <% if (isLoggedIn) { %>
+                        <li>
+                            <div class="dropdown">
+                                <button class="dropbtn">Workshop Bookings
+                                <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="/booking/submit">Create a New Booking</a>
+                                    <a href="/booking/userbookings">Update/Delete a Booking</a>
+                                    <a href="/booking/find">Find a Booking</a>
+                                </div>
+                            </div>
+                        </li>
+                    <% } else { %>
+                        <li><a href="/booking/find">Find a Booking</a></li>
+                    <% } %>
+                    <li><a href="/booking/bookings">Report on Bookings</a></li>
+                    <li><a href="/booking/schedule">Report on Workshops</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Account
+                            <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <% if (isLoggedIn) { %>
+                                    <a href="/user/logout">Logout</a>
+                                    <a href="/user/delete">Delete Account</a>
+                                <% } else { %>
+                                    <a href="/user/login">Sign In</a>
+                                    <a href="/user/register">Register</a>
+                                <% } %>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Resources
+                            <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="/resource/about">About</a>
+                                <a href="/resource/help">Help</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>

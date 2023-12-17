@@ -1,0 +1,184 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Full-screen background with text styles */
+.full-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('background-image.jpg') center/cover;
+  color: #fff;
+  text-align: center;
+}
+
+/* Header styles */
+header {
+  background: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Logo styles */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 90px;
+  margin-right: 5px;
+}
+
+.logo h1 {
+  font-size: 32px; 
+}
+
+/* Navigation styles */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-right: 15px; 
+}
+
+/* Common link styles for both regular and dropdown links */
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 14px 20px; 
+  font-size: 14px; 
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Apply the same hover effect for all links */
+nav ul li a:hover {
+  background: #555;
+  color: #FFD700;
+}
+
+/* The dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  text-decoration: none;
+  color: white;
+  padding: 14px 20px; 
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-size: 14px; 
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  background: #333;
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background: #555;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%;
+  left: 0;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background: #555;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  background: #333;
+}
+
+/* Style the main footer container */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 10px 0; /* Reduced padding */
+  text-align: center;
+}
+
+/* Style the content inside the footer */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px; 
+  max-width: 1000px; 
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 10px; 
+}
+
+.footer-section h4 {
+  font-size: 16px; 
+  margin-bottom: 5px; 
+}
+
+.footer-section p {
+  font-size: 12px; 
+}
+
+/* Style links in the footer */
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+}
+
+/* Style the bottom section of the footer */
+.footer-bottom {
+  background: #222;
+  padding: 5px 0;
+  text-align: center;
+}

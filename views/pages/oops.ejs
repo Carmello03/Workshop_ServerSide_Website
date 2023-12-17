@@ -1,0 +1,15 @@
+<%- include ("../partials/Althead"); -%>
+    <div class="successcontainer">
+        <h1>Oops!</h1>
+        <p>Something went wrong</p>
+        <h1><%= message %></h1>
+        <h2><%= error.status %></h2>
+        <pre><%= error.stack %></pre>
+        <div class="content">
+            <img src="../image/cat.jpg" alt="Confirmation Image">
+            <div class="button-container">
+                <a href="/" class="pill-button">Return to Home</a>
+            </div>
+        </div>
+    </div>
+<%- include ("../partials/foot"); -%>

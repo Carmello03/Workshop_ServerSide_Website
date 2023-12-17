@@ -1,0 +1,53 @@
+<%- include ("partials/Althead"); -%>
+<div class="wrapper">
+    <div class="container">
+        <h1>List of Bookings Report for <%= userName %></h1>
+        <% if (booking.length === 0) { %>
+            <div class="no-bookings">
+                <p>No bookings found.</p>
+                <img src="../image/sadcat.jpg" alt="No Bookings">
+                <div class="button-container">
+                    <a href="/booking/submit" class="pill-button">Create a Booking</a>
+                </div>
+            </div>
+        <% } else { %>
+            <% if (isLoggedIn) { %>
+            <div class="button-choice">
+                <div class="button-list-container-left">
+                    <a href="/booking/userbookings" class="pill-button">Show User bookings</a>
+                </div>
+                <div class="button-list-container-right">
+                    <a href="/booking/bookings" class="pill-button">Show All Bookings</a>
+                </div>
+            </div>
+            <% } else { %>
+            <div class="button-choice">
+                <h3>Please Login to Delete, Modify or View User Bookings</h3>
+            </div>
+            <% }; %>
+            <table class="booking-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Booking Date</th>
+                        <th>Email</th>
+                        <th>Workshop</th>
+                        <th>Booking Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% booking.forEach((singleBooking) => { %>
+                        <tr class="booking-row">
+                            <td><%= singleBooking.name %></td>
+                            <td><%= singleBooking.date %></td>
+                            <td><%= singleBooking.email %></td>
+                            <td><%= singleBooking.workshop %></td>
+                            <td><%= singleBooking.time %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        <% } %>
+    </div>
+</div>
+<%- include ("partials/foot"); -%>

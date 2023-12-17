@@ -1,0 +1,38 @@
+<%- include ("partials/head"); -%>
+    <main>
+        <section class="booking-form">
+            <h2>Edit Booking Details</h2>
+            <form id="booking-form" action="/booking/updateform/<%= booking._id %>" method="post">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" value="<%= booking.email %>" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" id="name" value="<%= booking.name %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="workshop">Workshop</label>
+                    <select name="workshop" id="workshop" class="custom-select" required>
+                        <option value="Photography Workshop" <%= booking.workshop === 'Photography Workshop' ? 'selected' : '' %>>Photography Workshop</option>
+                        <option value="Coding Workshop" <%= booking.workshop === 'Coding Workshop' ? 'selected' : '' %>>Coding Workshop</option>
+                        <option value="Cooking Workshop" <%= booking.workshop === 'Cooking Workshop' ? 'selected' : '' %>>Cooking Workshop</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Booking Date</label>
+                    <input type="date" name="date" id="date" value="<%= booking.date %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="cardnumber">Credit card number</label>
+                    <input type="text" name="cardnumber" id="cardnumber" value="<%= booking.cardnumber %>" pattern="\d{4}-?\d{4}-?\d{4}-?\d{4}" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Time</label>
+                    <input type="time" name="time" id="time" value="<%= booking.time %>" step="3600" min="09:00" max="18:00" required>
+                </div>
+                <button class="formbutton" type="submit">Update Booking</button>
+            </form>
+        </section>
+    </main>
+<%- include ("partials/foot"); -%>

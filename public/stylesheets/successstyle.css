@@ -1,0 +1,71 @@
+/* Styles for a success message container */
+.successcontainer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.successcontainer h1 {
+    font-size: 40px;
+    color: #333;
+    margin: 20px auto;
+}
+
+.successcontainer p {
+    font-size: 24px;
+    color: #555;
+}
+
+.successcontainer a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.successcontainer .content {
+    margin-top: 20px;
+}
+
+.successcontainer img {
+    width: 350px;
+    margin: 20px auto;
+}
+
+.successcontainer .button-container {
+    margin-top: 20px;
+}
+
+/* Pill-shaped button styles */
+.pill-button {
+    display: inline-block;
+    background-color: #2a2a2b;
+    color: #fff;
+    padding: 18px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Animation styles for the success image */
+.successcontainer img:hover {
+    /* Shake animation */
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+/* Keyframes for the shake animation */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}

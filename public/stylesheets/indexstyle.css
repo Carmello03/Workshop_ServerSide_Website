@@ -1,0 +1,94 @@
+/* Main content area styles */
+main {
+  padding: 10px;
+  width: 100%;
+}
+
+/* Hero section styles */
+.hero {
+  background: url('/image/Workshop-background.avif') center/cover;
+  text-align: center;
+  color: #fff;
+  padding: 200px 0; 
+}
+
+.hero h2 {
+  font-size: 28px; 
+  margin-bottom: 10px; 
+}
+
+hero p {
+  font-size: 16px; 
+}
+
+/* Features section styles */
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px; 
+}
+
+.feature {
+  text-align: center;
+  padding: 10px; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.feature h3 {
+  font-size: 20px; 
+  margin-bottom: 5px; 
+}
+
+.feature p {
+  font-size: 14px; 
+}
+
+/* Workshops section styles */
+.workshops {
+  background: #f7f7f7;
+  padding: 20px 0; 
+  text-align: center;
+}
+
+.workshops h2 {
+  font-size: 28px;
+  margin-bottom: 10px; 
+  color: #333;
+}
+
+.workshops ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.workshops li {
+  flex: 0 0 calc(33.33% - 10px); 
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px; 
+  margin: 5px; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.workshops li:hover {
+  transform: translateY(-3px); 
+}
+
+.workshops h3 {
+  font-size: 20px; 
+  margin-bottom: 5px; 
+  color: #333;
+}
+
+.workshops p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px; 
+}

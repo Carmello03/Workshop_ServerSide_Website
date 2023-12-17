@@ -1,0 +1,47 @@
+.schedulecontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; 
+    padding: 40px 0;
+    box-sizing: border-box; 
+}
+
+.schedulecontainer h2 {
+    padding: 10px;
+}
+.schedulecontainer p {
+    padding: 5px;
+}
+
+.scheduleheader {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #555555; 
+}
+
+.schedulebox {
+    display: flex;
+    align-items: center; 
+    width: 80%; 
+    padding: 20px; 
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.schedulebox img {
+    margin-right: 20px;
+    width: 200px; 
+    height: auto; 
+}
+
+.schedulecontent {
+    text-align: center;
+}

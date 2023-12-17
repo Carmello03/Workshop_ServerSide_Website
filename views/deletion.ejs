@@ -1,0 +1,29 @@
+<%- include ("partials/Althead"); -%>
+    
+    <div class="successcontainer">
+        <h2>Delete Account</h2>
+        <p>Are you sure you want to delete your account? This action cannot be undone.</p>
+        <img src="../image/deletecat.jpg" alt="Confirmation Image">
+        <div class="button-container">
+            <form id="deleteForm" action="/user/delete" method="post">
+                <button type="submit" class="pill-button">Click Here to Delete</button>
+            </form>
+        </div>
+    </div>
+    
+    <div style="margin-top: 20px;">
+        <a href="/">Cancel</a>
+    </div>
+
+    <script>
+        if (typeof document !== 'undefined') {
+            document.getElementById('deleteForm').addEventListener('submit', function(event) {
+                const confirmed = confirm('Are you sure you want to delete your account permanently?');
+                if (!confirmed) {
+                    event.preventDefault();
+                }
+            });
+        }
+    </script>
+
+<%- include ("partials/foot"); -%>

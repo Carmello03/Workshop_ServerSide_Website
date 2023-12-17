@@ -1,0 +1,22 @@
+<%- include ("partials/head"); -%>
+    <main>
+        <section class="booking-form">
+            <h2>Find Booking Details</h2>
+            <form id="booking-form" action="/booking/findform" method="post">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email"  required>
+                </div>
+                <div class="form-group">
+                    <label for="startDate">Start Date:</label>
+                    <input type="date" id="startDate" name="startDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="endDate">End Date:</label>
+                    <input type="date" id="endDate" name="endDate" required>
+                </div>
+                <button class="formbutton" type="submit">Find Booking</button>
+            </form>
+        </section>
+    </main>
+<%- include ("partials/foot"); -%>

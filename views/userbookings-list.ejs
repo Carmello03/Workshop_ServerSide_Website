@@ -1,0 +1,72 @@
+<%- include ("partials/Althead"); -%>
+<div class="wrapper">
+    <div class="container">
+        <h1>List of Bookings</h1>
+        <% if (userbookings.length === 0) { %>
+            <div class="no-bookings">
+                <p>No bookings found.</p>
+                <img src="../image/sadcat.jpg" alt="No Bookings">
+                <div class="button-container">
+                    <a href="/booking/submit" class="pill-button">Create a Booking</a>
+                </div>
+            </div>
+        <% } else { %>
+            <div class="button-choice">
+                <div class="button-list-container-left">
+                    <a href="/booking/userbookings" class="pill-button">Show User bookings</a>
+                </div>
+                <div class="button-list-container-right">
+                    <a href="/booking/bookings" class="pill-button">Show All Bookings</a>
+                </div>
+            </div>
+            <table class="booking-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Booking Date</th>
+                        <th>Email</th>
+                        <th>Booking Time</th>
+                        <th>Workshop</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% userbookings.forEach((booking) => { %>
+                        <tr class="booking-row">
+                            <td><%= booking.name %></td>
+                            <td><%= booking.date %></td>
+                            <td><%= booking.email %></td>
+                            <td><%= booking.workshop %></td>
+                            <td><%= booking.time %></td>
+                            <td>
+                                <div class="button-group">
+                                    <form action="/booking/update/<%= booking._id %>" method="post">
+                                        <button type="submit" class="update-booking-button">Update</button>
+                                    </form>
+                                    <form id="deletebookingForm" action="/booking/delete/<%= booking._id %>" method="post">
+                                        <button type="submit" class="delete-booking-button">Delete</button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        <% } %>
+    </div>
+</div>
+<script>
+    if (typeof document !== 'undefined') {
+        const deleteButtons = document.querySelectorAll('.delete-booking-button');
+        
+        deleteButtons.forEach((button) => {
+            button.addEventListener('click', function(event) {
+                const confirmed = confirm('Are you sure you want to delete your booking permanently?');
+                if (!confirmed) {
+                    event.preventDefault();
+                }
+            });
+        });
+    }
+</script>
+<%- include ("partials/foot"); -%>

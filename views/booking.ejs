@@ -1,0 +1,87 @@
+<%- include ("partials/head"); -%>
+    <main>
+        <section class="booking-form">
+            <h2>Fill in the Booking Details</h2>
+            <form id="booking-form" action="/booking/submit" method="post">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" value="<%= userEmail %>" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" id="name" placeholder="John Mac" required>
+                </div>
+                <div class="form-group">
+                    <label for="workshop">Workshop</label>
+                    <select name="workshop" id="workshop" class="custom-select" required>
+                        <option value="">--Select a Workshop--</option>
+                        <option value="Photography Workshop">Photography Workshop</option>
+                        <option value="Coding Workshop">Coding Workshop</option>
+                        <option value="Cooking Workshop">Cooking Workshop</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Booking Date</label>
+                    <input type="date" name="date" id="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="cardnumber">Credit card number</label>
+                    <input type="text" name="cardnumber" id="cardnumber" placeholder="1111-2222-3333-4444" pattern="\d{4}-?\d{4}-?\d{4}-?\d{4}" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Time</label>
+                    <input type="time" name="time" id="time" placeholder="hh:00" step="3600" min="09:00" max="18:00" required>
+                </div>
+                <button class="formbutton" type="submit">Submit Booking</button>
+            </form>
+        </section>
+
+        <div class="user-reviews">
+            <!-- User Review #1 -->
+            <div class="user-review">
+                <div class="user-info">
+                    <img src="../image/user1.jpg" alt="User Avatar">
+                    <p class="user-name">John Doe</p>
+                </div>
+                <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="review-rating">
+                    <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+                </div>
+            </div>
+            <!-- User Review #2  -->
+            <div class="user-review">
+                <div class="user-info">
+                    <img src="../image/user2.jpg" alt="User Avatar">
+                    <p class="user-name">Jacquife Doe</p>
+                </div>
+                <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="review-rating">
+                    <span class="stars">&#9733; &#9733; &#9733;</span>
+                </div>
+            </div>
+             <!-- User Review #3  -->
+            <div class="user-review">
+                <div class="user-info">
+                    <img src="../image/user1.jpg" alt="User Avatar">
+                    <p class="user-name">Jimmy Doe</p>
+                </div>
+                <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="review-rating">
+                    <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+                </div>
+            </div>
+             <!-- User Review #4  -->
+            <div class="user-review">
+                <div class="user-info">
+                    <img src="../image/user2.jpg" alt="User Avatar">
+                    <p class="user-name">Jackie Doe</p>
+                </div>
+                <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="review-rating">
+                    <span class="stars">&#9733; &#9733; &#9733; &#9733;;</span>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+<%- include ("partials/foot"); -%>
